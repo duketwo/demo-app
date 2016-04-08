@@ -3,8 +3,6 @@ import React, { AppRegistry, Component, Navigator, DrawerLayoutAndroid, ScrollVi
 import Navigate from './src/utils/Navigate';
 import { Toolbar } from './src/components';
 import Navigation from './src/scenes/Navigation';
-import Welcome from './src/scenes/Welcome';
-// var SplashScreen = require('@remobile/react-native-splashscreen');
 
 class Application extends Component {
 

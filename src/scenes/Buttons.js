@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, View, Text, IntentAndroid, InteractionManager, Alert, TouchableNativeFeedback } from 'react-native';
+import React, { Component, PropTypes, View, Text, InteractionManager, Alert } from 'react-native';
 import { Button, Subheader, COLOR } from 'react-native-material-design';
 
 
