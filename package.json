@@ -9,7 +9,6 @@
     "setup adb reverse": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
-    "@remobile/react-native-splashscreen": "^1.0.3",
     "react": "^0.14.5",
     "react-native": "^0.23.0",
     "react-native-action-button": "^1.0.8",
