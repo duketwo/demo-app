@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-native start",
     "buildRelease": "cd android && ./gradlew assembleRelease",
-    "installRelease": "cd android && ./gradlew installRelease"
+    "installRelease": "cd android && ./gradlew installRelease",
+    "setup adb reverse": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
     "@remobile/react-native-splashscreen": "^1.0.3",
