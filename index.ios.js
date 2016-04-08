@@ -1,37 +1,95 @@
-import React, { AppRegistry, Component, StyleSheet, Text, View } from 'react-native';
+import React, { AppRegistry, Component, Navigator, DrawerLayoutAndroid, ScrollView, View, Text } from 'react-native';
 
-class DemoApp extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          React Native Material Design
-        </Text>
-        <Text style={styles.instructions}>
-          iOS example coming soon... PRs welcome!
-        </Text>
-      </View>
-    );
-  }
+import Navigate from './src/utils/Navigate';
+import { Toolbar } from './src/components';
+import Navigation from './src/scenes/Navigation';
+import DrawerLayout from 'react-native-drawer-layout';
+
+class Application extends Component {
+
+    static childContextTypes = {
+        drawer: React.PropTypes.object,
+        navigator: React.PropTypes.object
+    };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            drawer: null,
+            navigator: null
+        };
+    }
+
+    componentDidMount() {
+        // SplashScreen.hide();
+    }
+
+    getChildContext = () => {
+        return {
+            drawer: this.state.drawer,
+            navigator: this.state.navigator
+        }
+    };
+
+    setDrawer = (drawer) => {
+        this.setState({
+            drawer
+        });
+    };
+
+    setNavigator = (navigator) => {
+        this.setState({
+            navigator: new Navigate(navigator)
+        });
+    };
+
+    render() {
+        const { drawer, navigator } = this.state;
+        const navView = React.createElement(Navigation);
+
+        return (
+            <DrawerLayout
+                drawerWidth={300}
+                drawerPosition={DrawerLayout.positions.Left}
+                renderNavigationView={() => {
+                    if (drawer && navigator) {
+                        return navView;
+                    }
+                    return null;
+                }}
+                ref={(drawer) => { !this.state.drawer ? this.setDrawer(drawer) : null }}
+            >
+                {drawer &&
+                <Navigator
+                    initialRoute={Navigate.getInitialRoute()}
+                    navigationBar={<Toolbar onIconPress={drawer.openDrawer} />}
+                    configureScene={() => {
+                            return Navigator.SceneConfigs.FadeAndroid;
+                        }}
+                    ref={(navigator) => { !this.state.navigator ? this.setNavigator(navigator) : null }}
+                    renderScene={(route) => {
+                        if (this.state.navigator && route.component) {
+                            return (
+                                <View
+                                    style={styles.scene}
+                                    showsVerticalScrollIndicator={false}>
+                                	<route.component title={route.title} path={route.path} {...route.props} />
+                                </View>
+                            );
+                        }
+                    }}
+                />
+                }
+            </DrawerLayout>
+        );
+    }
 }
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  }
-});
+AppRegistry.registerComponent('DemoApp', () => Application);
 
-AppRegistry.registerComponent('DemoApp', () => DemoApp);
+const styles = {
+    scene: {
+        flex: 1,
+        marginTop: 56
+    }
+};

@@ -3,6 +3,7 @@ import React, { AppRegistry, Component, Navigator, DrawerLayoutAndroid, ScrollVi
 import Navigate from './src/utils/Navigate';
 import { Toolbar } from './src/components';
 import Navigation from './src/scenes/Navigation';
+import DrawerLayout from 'react-native-drawer-layout';
 
 class Application extends Component {
 
@@ -47,9 +48,9 @@ class Application extends Component {
 		const navView = React.createElement(Navigation);
 
 		return (
-			<DrawerLayoutAndroid
+			<DrawerLayout
 				drawerWidth={300}
-				drawerPosition={DrawerLayoutAndroid.positions.Left}
+				drawerPosition={DrawerLayout.positions.Left}
 				renderNavigationView={() => {
                     if (drawer && navigator) {
                         return navView;
@@ -79,7 +80,7 @@ class Application extends Component {
                     }}
 				/>
 				}
-			</DrawerLayoutAndroid>
+			</DrawerLayout>
 		);
 	}
 }
