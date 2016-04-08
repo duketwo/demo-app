@@ -1,12 +1,11 @@
 import React, { Component, View } from 'react-native';
 import { Subheader, CheckboxGroup, COLOR } from 'react-native-material-design';
 
-import AppStore from '../stores/AppStore';
 
 export default class Checkboxes extends Component {
 
     render() {
-        const theme = AppStore.getState().theme;
+        const theme = 'paperTeal';
 
         return (
             <View>

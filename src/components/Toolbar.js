@@ -1,6 +1,6 @@
 import React, { Component, PropTypes, Text, View } from 'react-native';
 import { Toolbar as MaterialToolbar } from 'react-native-material-design';
-import AppStore from '../stores/AppStore';
+// import AppStore from '../stores/AppStore';
 
 export default class Toolbar extends Component {
 
@@ -15,30 +15,32 @@ export default class Toolbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: AppStore.getState().routeName,
-            theme: AppStore.getState().theme,
+            //title: AppStore.getState().routeName,
+            //theme: AppStore.getState().theme,
+            title: 'Welcome',
+            theme: 'paperTeal',
             counter: 0
         };
     }
 
     increment = () => {
-        this.setState({
+        this.setState({ 
             counter: this.state.counter + 1
         });
     };
 
-    componentDidMount = () => {
-        AppStore.listen(this.handleAppStore);
-    };
-
-    componentWillUnmount() {
-        AppStore.unlisten(this.handleAppStore);
-    }
+    // componentDidMount = () => {
+    //     AppStore.listen(this.handleAppStore);
+    // };
+    //
+    // componentWillUnmount() {
+    //     AppStore.unlisten(this.handleAppStore);
+    // }
 
     handleAppStore = (store) => {
         this.setState({
-            title: store.routeName,
-            theme: store.theme
+            title: 'Welcome',
+            theme: 'paperTeal',
         });
     };
 

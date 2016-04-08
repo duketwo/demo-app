@@ -1,12 +1,10 @@
 import React, { Component, TouchableHighlight, View, Text } from 'react-native';
 import { Subheader, COLOR, PRIMARY_COLORS } from 'react-native-material-design';
 
-import AppActions from '../actions/AppActions';
-
 export default class Themes extends Component {
 
     changeTheme = (theme) => {
-        AppActions.updateTheme(theme);
+
     };
 
     render() {

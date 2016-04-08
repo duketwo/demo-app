@@ -1,8 +1,6 @@
 import React, { Component, View, ScrollView, ProgressBarAndroid, Image } from 'react-native';
 import { Subheader, Divider, List, Icon, Avatar, COLOR, IconToggle } from 'react-native-material-design';
 
-import AppStore from '../stores/AppStore';
-
 export default class ListExample extends Component {
 
     render() {

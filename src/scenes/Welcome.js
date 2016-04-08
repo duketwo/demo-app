@@ -1,8 +1,6 @@
 import React, { Component, PropTypes, View, Text, Image, IntentAndroid } from 'react-native';
 import { Card, Button, COLOR, TYPO } from 'react-native-material-design';
 
-import AppStore from '../stores/AppStore';
-
 export default class Welcome extends Component {
 
     static contextTypes = {
@@ -11,7 +9,7 @@ export default class Welcome extends Component {
 
     render() {
         const { navigator } = this.context;
-        const theme = AppStore.getState().theme;
+        const theme = 'paperTeal';
 
         return (
             <View>

@@ -1,12 +1,11 @@
 import React, { Component, PropTypes, View, Text, IntentAndroid, InteractionManager, Alert, TouchableNativeFeedback } from 'react-native';
 import { Button, Subheader, COLOR } from 'react-native-material-design';
 
-import AppStore from '../stores/AppStore';
 
 export default class Buttons extends Component {
 
     render() {
-        const theme = AppStore.getState().theme;
+        const theme = 'paperTeal';
 
         return (
             <View>
