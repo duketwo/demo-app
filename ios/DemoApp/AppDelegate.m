@@ -17,6 +17,19 @@
 {
   NSURL *jsCodeLocation;
 
+  
+  for (NSString* family in [UIFont familyNames])
+  {
+//    NSLog(@"%@", family);
+    for (NSString* name in [UIFont fontNamesForFamilyName: family])
+    {
+      if([name containsString:@"Roboto"]) {
+      NSLog(@" %@", name);
+        }
+
+    }
+  }
+  
   /**
    * Loading JavaScript code - uncomment the one you want.
    *
@@ -31,7 +44,7 @@
    * on the same Wi-Fi network.
    */
 
-  jsCodeLocation = [NSURL URLWithString:@"http://10.0.1.100:8081/index.ios.bundle?platform=ios&dev=true"];
+  jsCodeLocation = [NSURL URLWithString:@"http://192.168.110.130:8081/index.ios.bundle?platform=ios&dev=true"];
 
   /**
    * OPTION 2
