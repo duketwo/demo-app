@@ -1,4 +1,4 @@
-import React, { AppRegistry, Component, Navigator, DrawerLayoutAndroid, ScrollView, View, Text } from 'react-native';
+import React, { AppRegistry, Component, Navigator, DrawerLayoutAndroid, ScrollView, View, Text, StatusBar } from 'react-native';
 
 import Navigate from './src/utils/Navigate';
 import { Toolbar } from './src/components';
@@ -80,6 +80,9 @@ class Application extends Component {
                     }}
                 />
                 }
+                <StatusBar
+                    hidden={true}
+                />
             </DrawerLayout>
         );
     }
