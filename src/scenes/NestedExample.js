@@ -15,7 +15,7 @@ export default class Avatars extends Component {
                 <WebView
                     ref={"webViewAndroidSample"}
                     automaticallyAdjustContentInsets={false}
-                    url={"http://google.com"}
+                    source={{uri: "http://google.com"}}
                     javaScriptEnabledAndroid={true}
                     scalesPageToFit={true}
                 />

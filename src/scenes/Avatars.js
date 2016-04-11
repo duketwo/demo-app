@@ -30,10 +30,10 @@ export default class Avatars extends Component {
                 </View>
                 <Subheader text="Avatar with text"/>
                 <View style={styles.avatarContainer}>
-                    <Avatar text={'EH'} />
+                    <Avatar size={45} text={'EH'} />
                     <Avatar size={60} backgroundColor="paperOrange" color="#000000" text={'MD'} />
                     <Avatar size={80} backgroundColor="paperPink" text={'EK'} />
-                    <Avatar size={120} color="paperTeal" text={'FB'} />
+                    <Avatar size={120} backgroundColor="paperTeal" text={'FB'} />
                 </View>
             </ScrollView>
         );
