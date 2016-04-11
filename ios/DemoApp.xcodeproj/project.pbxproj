@@ -476,7 +476,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 3H4Q94CH6J;
+						DevelopmentTeam = MJ3MFT63XH;
 					};
 				};
 			};
@@ -793,7 +793,7 @@
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.DemoApp.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.DemoApp.sample.sample2;
 				PRODUCT_NAME = DemoApp;
 				PROVISIONING_PROFILE = "";
 			};
@@ -814,7 +814,7 @@
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.DemoApp.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.DemoApp.sample.sample2;
 				PRODUCT_NAME = DemoApp;
 				PROVISIONING_PROFILE = "";
 			};

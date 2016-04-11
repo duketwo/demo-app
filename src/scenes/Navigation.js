@@ -34,7 +34,7 @@ export default class Navigation extends Component {
                 <Drawer.Header image={<Image source={require('./../img/nav.jpg')} />}>
                     <View style={styles.header}>
                         <Avatar size={80} image={<Image source={{ uri: "http://facebook.github.io/react-native/img/opengraph.png?2" }}/>} />
-                        <Text style={[styles.text, COLOR.paperGrey50, TYPO.paperFontSubhead]}>React Native Material Design</Text>
+                        <Text style={[styles.text, COLOR.paperGrey50, TYPO.paperFontSubhead, {backgroundColor: 'transparent', fontWeight: 'bold'}]}>React Native Material Design</Text>
                     </View>
                 </Drawer.Header>
 
