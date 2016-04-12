@@ -30,7 +30,7 @@ export default class Welcome extends Component {
                 </Card>
                 <Card>
                     <Card.Body>
-                        <Text>If you find any issues or potential improvements please submit an issue on the GitHub repository page.</Text>
+                        <Text style={{fontFamily: 'RobotoMono-Italic'}}>If you find any issues or potential improvements please submit an issue on the GitHub repository page.</Text>
                     </Card.Body>
                 </Card>
                 <Button text="Go to child component" primary={theme} onPress={() => { navigator.forward() }} />
