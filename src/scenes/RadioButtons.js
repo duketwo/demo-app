@@ -1,4 +1,4 @@
-import React, { Component, View } from 'react-native';
+import React, { Component, View, ScrollView } from 'react-native';
 import { Subheader, RadioButtonGroup, COLOR } from 'react-native-material-design';
 
 
@@ -8,7 +8,10 @@ export default class Checkboxes extends Component {
         const theme = 'paperTeal';
 
         return (
-            <View>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                bounces={false}
+            >
                 <Subheader text="Light Theme" />
                 <RadioButtonGroup
                     primary={theme}
@@ -40,7 +43,7 @@ export default class Checkboxes extends Component {
                         }]}
                     />
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }

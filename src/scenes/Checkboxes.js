@@ -9,14 +9,15 @@ export default class Checkboxes extends Component {
 
         return (
             <ScrollView
-                automaticallyAdjustContentInsets={false}
-                scrollEventThrottle={200}>
-            <View>
-                <Subheader text="Light Theme" />
-                <CheckboxGroup
-                    primary={theme}
-                    checked={[1, 3]}
-                    items={[{
+                showsVerticalScrollIndicator={false}
+                bounces={false}
+                >
+                <View>
+                    <Subheader text="Light Theme" />
+                    <CheckboxGroup
+                        primary={theme}
+                        checked={[1, 3]}
+                        items={[{
                         value: 1, label: 'Checked by default'
                     }, {
                         value: 2, label: 'Default'
@@ -27,14 +28,14 @@ export default class Checkboxes extends Component {
                     }, {
                         value: 5
                     }]}
-                />
-                <Subheader text="Dark Theme" />
-                <View style={{ backgroundColor: COLOR.paperGrey900.color }}>
-                    <CheckboxGroup
-                        primary={theme}
-                        theme="dark"
-                        checked={[1, 3]}
-                        items={[{
+                    />
+                    <Subheader text="Dark Theme" />
+                    <View style={{ backgroundColor: COLOR.paperGrey900.color }}>
+                        <CheckboxGroup
+                            primary={theme}
+                            theme="dark"
+                            checked={[1, 3]}
+                            items={[{
                             value: 1, label: 'Checked by default'
                         }, {
                             value: 2, label: 'Default'
@@ -45,10 +46,10 @@ export default class Checkboxes extends Component {
                         }, {
                             value: 5
                         }]}
-                    />
+                        />
+                    </View>
                 </View>
-            </View>
-                </ScrollView>
+            </ScrollView>
         );
     }
 }

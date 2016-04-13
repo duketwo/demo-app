@@ -5,7 +5,10 @@ export default class Avatars extends Component {
 
     render() {
         return (
-            <ScrollView>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                bounces={false}
+            >
                 <Subheader text="Avatar with external image"/>
                 <View style={styles.avatarContainer}>
                     <Avatar image={<Image source={{ uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ok/128.jpg' }} />} />
