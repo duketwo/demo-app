@@ -4,6 +4,7 @@ import Navigate from './src/utils/Navigate';
 import { Toolbar } from './src/components';
 import Navigation from './src/scenes/Navigation';
 import DrawerLayout from 'react-native-drawer-layout';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 class Application extends Component {
 
@@ -88,6 +89,7 @@ class Application extends Component {
     }
 }
 
+EStyleSheet.build();
 AppRegistry.registerComponent('DemoApp', () => Application);
 
 const styles = {
