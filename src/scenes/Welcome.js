@@ -13,9 +13,9 @@ export default class Welcome extends Component {
         const theme = 'paperTeal';
         return (
             <View style={[{flex: 1}, BACKGROUNDCOLOR.paperGrey300]}>
-                <Card>
+                <Card style={BACKGROUNDCOLOR.paperGrey100}>
                     <Card.Media
-                        image={<Image source={require('./../img/welcome.jpg')} />}
+                        image={<Image source={require('./../img/welcome.jpg')} resizeMode='stretch' />}
                         overlay={true}
                     >
                         <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey50]}>Welcome</Text>
@@ -28,7 +28,7 @@ export default class Welcome extends Component {
                         <Button primary={theme} text="GO TO GITHUB" onPress={() => Linking.openURL('https://github.com/react-native-material-design/react-native-material-design').catch(err => console.error('An error occurred', err))} />
                     </Card.Actions>
                 </Card>
-                <Card>
+                <Card style={BACKGROUNDCOLOR.paperGrey100}>
                     <Card.Body>
                         <Text style={[{fontFamily: 'RobotoMono-Italic'},COLOR.paperGrey800]}>If you find any issues or potential improvements please submit an issue on the GitHub repository page.</Text>
                     </Card.Body>
