@@ -56,6 +56,11 @@ export default {
         title: 'Subheaders',
         component: require('./scenes/Subheaders').default
     },
+    
+    login: {
+        title: 'Login Example',
+        component: require('./scenes/Login').default
+    },
 
     themes: {
         title: 'Change Theme',

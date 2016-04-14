@@ -108,7 +108,17 @@ export default class Navigation extends Component {
                         active: route === 'subheaders',
                         onPress: () => this.changeScene('subheaders'),
                         onLongPress: () => this.changeScene('subheaders')
-                    }]}
+                    }, {
+                        icon: 'label',
+                        value: 'Login Example',
+                        label: '8',
+                        active: route === 'login',
+                        onPress: () => this.changeScene('login'),
+                        onLongPress: () => this.changeScene('login')
+                    }
+
+
+                    ]}
                 />
                 <Divider style={{ marginTop: 8 }} />
                 <Drawer.Section

@@ -6,7 +6,10 @@
     "start": "react-native start",
     "buildRelease": "cd android && ./gradlew assembleRelease",
     "installRelease": "cd android && ./gradlew installRelease",
-    "setup adb reverse": "adb reverse tcp:8081 tcp:8081"
+    "setup adb reverse 8081": "adb reverse tcp:8081 tcp:8081",
+    "setup adb reverse 8082": "adb reverse tcp:8082 tcp:8082",
+    "start packager 8081": "node_modules/react-native/packager/packager.sh --port=8081",
+    "start packager 8082": "node_modules/react-native/packager/packager.sh --port=8082"
   },
   "dependencies": {
     "react": "^0.14.5",
