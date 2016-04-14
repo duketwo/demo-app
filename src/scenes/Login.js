@@ -25,11 +25,11 @@ export default class Welcome extends Component {
         const { navigator } = this.context;
         return (
 
-            <Image style={styles.bg} source={{uri: 'http://i.imgur.com/xlQ56UK.jpg'}}>
+            <Image style={styles.bg} source={{uri: 'https://lh4.googleusercontent.com/-c2kWlW-DE9A/VMSgQjCdffI/AAAAAAAADy4/tB__iZ25nxQ/w1080-h600/atardecer8.png'}}>
                 <View style={styles.container}>
                     <View>
                         <View style={styles.header}>
-                            <Image style={styles.mark} source={{uri: 'http://i.imgur.com/da4G0Io.png'}} />
+                            <Image style={styles.mark} source={{uri: 'https://upload.wikimedia.org/wikipedia/en/b/be/Google_Chrome_for_Android-_Android_5.0_Logo.png'}} />
                         </View>
                         <View style={styles.inputs}>
                             <View style={styles.inputContainer}>
@@ -67,7 +67,7 @@ export default class Welcome extends Component {
                             </View>
                         </View>
 
-                        <Button text="Sign In" primary={"paperPink"} raised={true}/>
+                        <Button text="Sign In" theme="dark" primary={"paperTeal"} raised={true}/>
 
                         <View style={styles.signup}>
                             <Text style={styles.greyFont}>Don't have an account?</Text>
